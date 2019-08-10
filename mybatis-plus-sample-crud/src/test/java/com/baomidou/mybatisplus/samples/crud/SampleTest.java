@@ -107,8 +107,16 @@ public class SampleTest {
                         .setName("miemie")
                         .setEmail("miemie@baomidou.com")
                         .setAge(3));
+                        
         assertThat(mapper.selectById(10086L).getEmail()).isEqualTo("miemie@baomidou.com");
-        User user = mapper.selectOne(new QueryWrapper<User>().lambda().eq(User::getId, 10086));
+        
+        User user = 
+        mapper
+        .selectOne(new QueryWrapper<User>()
+            .lambda()
+            .eq(User::getId, 10086));
+            
+        
         assertThat(user.getName()).isEqualTo("miemie");
         assertThat(user.getAge()).isEqualTo(3);
 
