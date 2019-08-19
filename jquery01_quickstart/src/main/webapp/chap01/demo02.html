@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/..js"></script>
+    <script type="text/javascript">
+        // function init() {
+        //     document.getElementById("actionButton").onclick=function () {
+        //         var content1=document.getElementById("content").value;
+        //         alert(content1)
+        //     }
+        // }
+        $(document).ready(function () {
+            $("#actionButton").click(function () {
+                alert($("#content").val());
+            });
+        });
+    </script>
+</head>
+<!--<body onload="init()">-->
+<body>
+<input type="text" id="content"/>&nbsp;&nbsp;&nbsp;<input type="button" id="actionButton" value="获取内容"/>
+</body>
+</html>

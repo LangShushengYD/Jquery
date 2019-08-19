@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script type="text/javascript" src="../js/..js"></script>
+    <script type="text/javascript">
+        //Jquery一些事件
+        $(document).ready(function () {
+            // alert("文档加载完毕！");
+            $("#zs").click(function () {
+                $("#p1").html("<font color='red'>张三被点了</font>");
+            });
+            $("#zs").dblclick(function () {
+                $("#p1").html("<font color='red'>张三被双击了</font>");
+            });
+            $("#t1").focus(function () {
+                $("#t1").val("获得焦点！");
+            });
+            $("#t1").blur(function () {
+                $("#t1").val("失去焦点！");
+            });
+            $("#d1").mouseover(function () {
+                $("#d1").html("鼠标移入！");
+                // alert("鼠标移入");
+            });
+            $("#d1").mouseout(function () {
+                $("#d1").html("鼠标移出！");
+                // alert("鼠标移出");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="zs" value="张三"/>
+<p id="p1"></p>
+<input type="text" id="t1"/>
+<hr/>
+<div id="d1" style="border: 1px solid red;width: 100px;height: 100px"></div>
+</body>
+</html>

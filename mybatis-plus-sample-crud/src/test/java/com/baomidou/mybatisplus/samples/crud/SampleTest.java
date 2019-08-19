@@ -215,7 +215,5 @@ public class SampleTest {
                         .setAge(3));
         User miemie = mapper.selectById(10088L);
         Assert.assertNotNull(miemie);
-
     }
-
 }

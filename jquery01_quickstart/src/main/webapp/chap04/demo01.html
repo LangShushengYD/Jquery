@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/..js"></script>
+    <script type="text/javascript">
+        //演示一些动画效果
+        $(document).ready(function () {
+            //显示
+            $("#b1").click(function () {
+                $("#p").show();
+            });
+            //隐藏
+            $("#b2").click(function () {
+                $("#p").hide();
+            });
+            //淡入
+            $("#b3").click(function () {
+                $("#d1").fadeIn();
+            });
+            //淡出
+            $("#b4").click(function () {
+                $("#d1").fadeOut();
+                // $("#d1").fadeToggle("slow");
+                // $("#d1").fadeToggle("fast");
+                //10秒淡入淡出开关
+                // $("#d1").fadeToggle("10000");
+            });
+            //透明度
+            $("#b5").click(function () {
+                $("#d1").fadeTo("slow",0.1);
+                $("#d2").fadeTo("slow",0.5);
+                $("#d3").fadeTo("slow",0.9);
+            });
+            //下拉
+            $("#b6").click(function () {
+                $("#d4").slideDown("slow");
+            });
+            //收起
+            $("#b7").click(function () {
+                $("#d4").slideUp("slow");
+            });
+            //右移
+            $("#b8").click(function () {
+                $("#d5").animate({left:'500px'},'slow');
+            });
+            // $("#b9").click(function () {
+            //    $("#d5").animate({right:'500px'},'slow');
+            // });
+            //右移并淡出
+            $("#b9").click(function () {
+                $("#d5").animate({
+                    left:'500px',
+                    opacity:'0',
+                    height:'150px',
+                    width:'150px'
+                },'slow');
+            });
+            $("#b10").click(function () {
+                $("#d5").animate({right:'500px'},'slow');
+            });
+            //暂停
+            $("#b11").click(function () {
+                $("#d5").stop();
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" id="b1" value="出来"/>
+<input type="button" id="b2" value="滚"/>
+<p id="p">小日本</p>
+<input type="button" id="b3" value="淡入"/>
+<input type="button" id="b4" value="淡出"/>
+<input type="button" id="b5" value="透明度"/>
+<div id="d1" style="width: 100px;height: 100px;background-color: red;margin: 10px;"></div>
+<div id="d2" style="width: 100px;height: 100px;background-color: green;margin: 10px;"></div>
+<div id="d3" style="width: 100px;height: 100px;background-color: yellow;margin: 10px;"></div>
+<hr/>
+<input type="button" value="向下滑动" id="b6"/>
+<input type="button" value="向下滑动" id="b7"/>
+<div id="d4" style="background-color: aliceblue;display: none;height: 100px;width: 500px;">
+    <p>java1234</p>
+    <p>java1234吊炸天</p>
+</div>
+<hr/>
+<input type="button" value="向右移动"id="b8"/>
+<input type="button" value="动画效果"id="b9"/>
+<input type="button" value="移动"id="b10"/>
+<input type="button" value="停止"id="b11"/>
+
+<div id="d5"style="width: 100px;height: 100px;background-color: darkcyan;margin: 10px;position: absolute;"></div>
+</body>
+</html>

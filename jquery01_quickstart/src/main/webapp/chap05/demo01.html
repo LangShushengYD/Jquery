@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/..js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Jquery和ajax结合访问servlet，无需考虑浏览器版本问题
+            $("#b1").click(function () {
+                //load方法 第一个参数url地址，第二个参数为提交的参数，第三个参数可以写一个函数，无论成功与失败都会执行的方法
+                $("#d1").load("/jquery01_quickstart_war/ajax?action=load",{name:"张三",age:14},function () {
+                    alert("执行完成！");
+                })
+            })
+
+            //利用参数从后台获取值，get和post方法都可用
+            $("#b2").click(function () {
+                // $.get("/jquery01_quickstart_war/ajax?action=post",{id:1},function (data,testStatus) {
+                $.post("/jquery01_quickstart_war/ajax?action=post",{id:1},function (data,testStatus) {
+                  // alert("请求状态:"+testStatus);
+                  // alert("返回数据:"+data);
+                  data=eval("("+data+")");
+                  $("#name").val(data.name);
+                  $("#age").val(data.age);
+               });
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" id="b1" value="load加载"/>
+<div id="d1"></div>
+<hr/>
+<input id="b2" type="button" value="post/get加载"/>
+姓名:<input type="text" id="name"/>
+年龄:<input type="text" id="age"/>
+</body>
+</html>

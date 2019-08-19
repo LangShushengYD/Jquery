@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/..js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /**
+             *  基本选择器
+             */
+        //    根据id
+        //     $("#a1").css("background-color","grey");
+        //    根据class
+        //     $(".c1").css("background-color","grey");
+        //    根据标签元素
+        //     $("a").css("background-color","grey");
+            /**
+             * 属性选择器
+             */
+            //有href属性
+            // $("[href]").css("background-color","grey");
+            //href属性为#的
+            // $("[href='#']").css("background-color","grey");
+            //以com结尾的
+            // $("[href$='com']").css("background-color","grey");
+            /**
+             * 其他选择器
+             */
+            // p标签下的class属性值为c1的dom节点
+            // $("p.c1").css("background-color","grey");
+            // a标签下class属性为c1的dom节点
+            // $("a.c1").css("background-color","grey");
+            // ul标签下第一个li标签
+            // $("ul li:first").css("background-color","grey");
+
+        })
+    </script>
+    <style type="text/css">
+        .c1{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+<p class="c1">Jquery选择器</p>
+<ul>
+    <li id="i1"><a id="a1" class="c1" href="htthjkhjhjj">Java知识分享网</a></li>
+    <li><a id="a2" class="c1" href="sadfsad">CSDN</a></li>
+    <li><a href="fghjkl">iteye</a></li>
+    <li><a href="bokeyuan">博客园</a></li>
+    <li><a class="c1" href="#">   </a></li>
+    <li><a href="google">谷歌</a></li>
+</ul>
+</body>
+</html>
